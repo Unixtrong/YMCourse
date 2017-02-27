@@ -36,10 +36,10 @@ public class L11ListViewActivity extends AppCompatActivity {
         mListView.setAdapter(arrayAdapter);
 
         // 5. 为 ListView 添加点击事件
-        mListView.setOnItemClickListener(new OnNameClickLisenter());
+        mListView.setOnItemClickListener(new OnNameClickListener());
     }
 
-    class OnNameClickLisenter implements AdapterView.OnItemClickListener {
+    class OnNameClickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
             String name = (String) adapterView.getItemAtPosition(position);

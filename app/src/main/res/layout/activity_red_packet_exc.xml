@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_red_packet_exc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.huangshan.demo.ui.RedPacketExcActivity">
+
+    <EditText
+        android:id="@+id/red_et_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="金额" />
+
+    <EditText
+        android:id="@+id/red_et_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="人数" />
+
+    <Button
+        android:id="@+id/ted_btn_send"
+        android:onClick="senPacket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发红包" />
+
+</LinearLayout>

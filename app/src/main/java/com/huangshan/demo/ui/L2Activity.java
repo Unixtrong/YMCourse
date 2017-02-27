@@ -16,7 +16,10 @@ public class L2Activity extends AppCompatActivity {
     }
 
     public void changeTextView(View view) {
-        TextView tvName = (TextView) findViewById(R.id.text_tv_name);
-        tvName.setText("New Text");
+        View tvView = findViewById(R.id.text_tv_name);
+        if (tvView instanceof TextView) {
+            TextView tvName = (TextView) tvView;
+            tvName.setText("New Text");
+        }
     }
 }
