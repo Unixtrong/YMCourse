@@ -65,15 +65,20 @@ public class L17PreferenceActivity extends AppCompatActivity {
         double e = 8;
         char f = '?';
         byte g = 43;
-        String s = "[??]";
+        String s = "[你好]";
 
         // 字符可做运算
         char letter1 = 'A';
         char letter2 = 'a';
         char number1 = '5';
-        Log.d(TAG, "letter1=" + (char)(letter1 + 1));
-        Log.d(TAG, "letter2=" + (char)(letter2 + 1));
-        Log.d(TAG, "number1=" + (char)(number1 + 1));
+        Log.d(TAG, "letter1=" + (char) (letter1 + 1));
+        Log.d(TAG, "letter2=" + (char) (letter2 + 1));
+        Log.d(TAG, "number1=" + (char) (number1 + 1));
+
+        // 利用 char 循环输出 A ~ Z
+        for (char i = 'A'; i <= 'Z'; i++) {
+            Log.d(TAG, "letter: " + i);
+        }
 
         // 通过字符串得到字符
         String str = "Aloong";
