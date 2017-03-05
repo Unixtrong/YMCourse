@@ -9,7 +9,4 @@ public class SpellCard extends CardL14 {
         super(name);
         System.out.println("HS 法术卡牌 构造方法被调用了");
     }
-
-    private void play() {
-    }
 }
