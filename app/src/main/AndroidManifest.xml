@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.huangshan.demo">
+          package="com.huangshan.demo">
 
     <application
         android:allowBackup="true"
@@ -8,41 +8,43 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.L18ImplementsActivity">
+        <activity android:name=".ui.L19ArrayListActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".kt.ui.HomeActivity" />
-        <activity android:name=".kt.ui.Kt1ButtonActivity" />
-        <activity android:name=".kt.ui.Kt2TextViewActivity" />
-        <activity android:name=".kt.ui.Kt3RandomActivity" />
-        <activity android:name=".kt.ui.Kt4EditActivity" />
-        <activity android:name=".kt.ui.Kt5IntentActivity" />
-        <activity android:name=".kt.ui.Kt5Intent2Activity" />
-        <activity android:name=".ui.L1Activity" />
-        <activity android:name=".ui.L2Activity" />
-        <activity android:name=".ui.L3Activity" />
-        <activity android:name=".ui.LongL2Activity" />
-        <activity android:name=".ui.L4Activity" />
-        <activity android:name=".ui.L5Activity" />
-        <activity android:name=".ui.L5bActivity" />
-        <activity android:name=".ui.L6Activity" />
-        <activity android:name=".ui.L7Activity" />
-        <activity android:name=".ui.L7TestActivity" />
-        <activity android:name=".ui.L8MethodActivity" />
-        <activity android:name=".ui.L8TestActivity" />
-        <activity android:name=".ui.L9ThreadActivity" />
-        <activity android:name=".ui.L10WhileActivity" />
-        <activity android:name=".ui.L11ListViewActivity" />
-        <activity android:name=".ui.L13LayoutActivity" />
-        <activity android:name=".ui.L14ExtendsActivity" />
-        <activity android:name=".ui.L15DialogActivity" />
-        <activity android:name=".ui.RedPacketExcActivity" />
-        <activity android:name=".ui.RedPacketExcReceiveActivity" />
-        <activity android:name=".ui.L17PreferenceActivity" />
+        <activity android:name=".kt.ui.HomeActivity"/>
+        <activity android:name=".kt.ui.Kt1ButtonActivity"/>
+        <activity android:name=".kt.ui.Kt2TextViewActivity"/>
+        <activity android:name=".kt.ui.Kt3RandomActivity"/>
+        <activity android:name=".kt.ui.Kt4EditActivity"/>
+        <activity android:name=".kt.ui.Kt5IntentActivity"/>
+        <activity android:name=".kt.ui.Kt5Intent2Activity"/>
+        <activity android:name=".ui.L1Activity"/>
+        <activity android:name=".ui.L2Activity"/>
+        <activity android:name=".ui.L3Activity"/>
+        <activity android:name=".ui.LongL2Activity"/>
+        <activity android:name=".ui.L4Activity"/>
+        <activity android:name=".ui.L5Activity"/>
+        <activity android:name=".ui.L5bActivity"/>
+        <activity android:name=".ui.L6Activity"/>
+        <activity android:name=".ui.L7Activity"/>
+        <activity android:name=".ui.L7TestActivity"/>
+        <activity android:name=".ui.L8MethodActivity"/>
+        <activity android:name=".ui.L8TestActivity"/>
+        <activity android:name=".ui.L9ThreadActivity"/>
+        <activity android:name=".ui.L10WhileActivity"/>
+        <activity android:name=".ui.L11ListViewActivity"/>
+        <activity android:name=".ui.L13LayoutActivity"/>
+        <activity android:name=".ui.L14ExtendsActivity"/>
+        <activity android:name=".ui.L15DialogActivity"/>
+        <activity android:name=".ui.RedPacketExcActivity"/>
+        <activity android:name=".ui.RedPacketExcReceiveActivity"/>
+        <activity android:name=".ui.L17PreferenceActivity"/>
+        <activity android:name=".ui.L18ImplementsActivity">
+        </activity>
     </application>
 
 </manifest>
