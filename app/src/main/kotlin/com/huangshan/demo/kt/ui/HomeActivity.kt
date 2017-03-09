@@ -17,7 +17,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun initView() {
         val root = findViewById(R.id.activity_home) as LinearLayout
-        val regex = "Kt\\d".toRegex()
+        val regex = "Kt\\d{1,2}".toRegex()
         getKotlinActivities().forEach {
             val button = Button(this)
             val layoutParams = LinearLayout.LayoutParams(
@@ -39,7 +39,8 @@ class HomeActivity : AppCompatActivity() {
                 Kt2TextViewActivity::class.java,
                 Kt3RandomActivity::class.java,
                 Kt4EditActivity::class.java,
-                Kt5IntentActivity::class.java
+                Kt5IntentActivity::class.java,
+                Kt11ListViewExsActivity::class.java
         )
     }
 }
