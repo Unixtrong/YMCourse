@@ -10,6 +10,7 @@ import android.widget.ListView;
 import com.huangshan.demo.R;
 import com.huangshan.demo.bean.AttackSpellCardL18;
 import com.huangshan.demo.bean.CardL18;
+import com.huangshan.demo.bean.MC;
 import com.huangshan.demo.bean.MinionCardL18;
 import com.huangshan.demo.bean.SpellCardL18;
 import com.huangshan.demo.consts.GlobalConsts;
@@ -42,12 +43,15 @@ public class L18ImplementsActivity extends AppCompatActivity {
             Log.d(GlobalConsts.TAG, "card: " + card.a);
         }
 
-        // 接口可以通过匿名内部类的方式构建实例
+        // 接口和类都可以通过匿名内部类的方式构建实例
         new Thread(new Runnable() {
             @Override
             public void run() {
             }
         }).start();
+
+        MC xmc = new MC() {
+        };
 
         new ListView(this).setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

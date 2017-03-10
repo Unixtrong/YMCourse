@@ -6,6 +6,7 @@ import com.huangshan.demo.consts.GlobalConsts;
 
 public class MinionCardL18 extends CardL18 {
     private int damage;
+    private int hp;
 
     public MinionCardL18(String name) {
         setName(name);
@@ -30,5 +31,14 @@ public class MinionCardL18 extends CardL18 {
 
     public String getType() {
         return "随从牌";
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public MinionCardL18 setHp(int hp) {
+        this.hp = hp;
+        return this;
     }
 }
