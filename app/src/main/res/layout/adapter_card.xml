@@ -1,55 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="80dp">
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/l20_iv_icon"
-        android:layout_width="80dp"
-        android:scaleType="center"
-        android:layout_height="match_parent"
-        android:src="@mipmap/ic_hearthstone"/>
+    <TextView
+        android:id="@+id/l21_tv_sort_tag"
+        android:background="#DDDDDD"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:text="卡牌类型"
+        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
-        android:orientation="vertical">
+        android:layout_height="80dp">
 
-        <TextView
-            android:id="@+id/l20_tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:gravity="center_vertical"
-            android:text="炉石卡牌"
-            android:textSize="20sp"/>
+        <ImageView
+            android:id="@+id/l20_iv_icon"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@mipmap/ic_hearthstone_spell"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center_vertical">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/l20_tv_cost"
+                android:id="@+id/l20_tv_name"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="费：5"/>
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="炉石卡牌"
+                android:textSize="20sp"/>
 
-            <TextView
-                android:id="@+id/l20_tv_attack"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="攻：3"/>
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
 
-            <TextView
-                android:id="@+id/l20_tv_hp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="血：20"/>
+                <TextView
+                    android:id="@+id/l20_tv_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="费：5"/>
+
+                <TextView
+                    android:id="@+id/l20_tv_attack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="攻：3"/>
+
+                <TextView
+                    android:id="@+id/l20_tv_hp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="血：20"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

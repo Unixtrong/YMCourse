@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.huangshan.demo.ui.L20BaseAdapterActivity">
+    tools:context="com.huangshan.demo.ui.L20And21BaseAdapterActivity">
 
     <ListView
         android:id="@+id/l20_lv"

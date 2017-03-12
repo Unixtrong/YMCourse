@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.huangshan.demo.R;
 import com.huangshan.demo.bean.AttackSpellCardL18;
 import com.huangshan.demo.bean.CardL18;
+import com.huangshan.demo.bean.EffectSpellCardL18;
 import com.huangshan.demo.bean.MinionCardL18;
 import com.huangshan.demo.bean.SpellCardL18;
 
@@ -65,6 +66,7 @@ public class CardAdapter extends BaseAdapter {
             view = inflater.inflate(R.layout.adapter_card, viewGroup, false);
             holder = new Holder();
             holder.mIvIcon = (ImageView) view.findViewById(R.id.l20_iv_icon);
+            holder.mTvSortTag = (TextView) view.findViewById(R.id.l21_tv_sort_tag);
             holder.mTvName = (TextView) view.findViewById(R.id.l20_tv_name);
             holder.mTvAttack = (TextView) view.findViewById(R.id.l20_tv_attack);
             holder.mTvCost = (TextView) view.findViewById(R.id.l20_tv_cost);
@@ -80,9 +82,21 @@ public class CardAdapter extends BaseAdapter {
         CardL18 card = mData.get(position);
         holder.mTvName.setText(card.getName());
         holder.mTvCost.setText("费：" + card.getCost());
+
+        String cardType = getCardType(card);
+        String lastCardType = getLastCardType(position);
+        if (cardType.equals(lastCardType)) {
+            // tag 不展示
+            // holder.mTvSortTag.setVisibility(View.INVISIBLE);
+            holder.mTvSortTag.setVisibility(View.GONE);
+        } else {
+            // tag 展示
+            holder.mTvSortTag.setVisibility(View.VISIBLE);
+        }
+        holder.mTvSortTag.setText(cardType);
         // instanceof: instance of
         if (card instanceof SpellCardL18) {
-            holder.mIvIcon.setImageResource(R.mipmap.ic_hearthstone);
+            holder.mIvIcon.setImageResource(R.mipmap.ic_hearthstone_spell);
             holder.mTvHp.setText("");
             if (card instanceof AttackSpellCardL18) {
                 AttackSpellCardL18 asc = (AttackSpellCardL18) card;
@@ -104,8 +118,32 @@ public class CardAdapter extends BaseAdapter {
         return view;
     }
 
+    private String getLastCardType(int position) {
+        if (position == 0) {
+            return "";
+        } else {
+            CardL18 lastCard = mData.get(position - 1);
+            return getCardType(lastCard);
+        }
+    }
+
+    private String getCardType(CardL18 card) {
+        String cardType;
+        if (card instanceof MinionCardL18) {
+            cardType = "随从卡牌";
+        } else if (card instanceof AttackSpellCardL18) {
+            cardType = "攻击法术卡牌";
+        } else if (card instanceof EffectSpellCardL18) {
+            cardType = "效果法术卡牌";
+        } else {
+            cardType = "其他";
+        }
+        return cardType;
+    }
+
     private class Holder {
         ImageView mIvIcon;
+        TextView mTvSortTag;
         TextView mTvName;
         TextView mTvCost;
         TextView mTvAttack;
