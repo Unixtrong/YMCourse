@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#3333AA"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/pop_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="百变泽鲁斯"
+        android:textColor="#FFF"/>
+
+    <ImageView
+        android:id="@+id/pop_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ivPopup"
+        android:src="@mipmap/image_first"/>
+</LinearLayout>

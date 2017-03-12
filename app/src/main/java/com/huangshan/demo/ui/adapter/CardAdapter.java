@@ -58,7 +58,7 @@ public class CardAdapter extends BaseAdapter {
      * 获取某一项的子视图
      */
     @Override
-    public View getView(int position, View view, ViewGroup viewGroup) {
+    public View getView(final int position, View view, ViewGroup viewGroup) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         Holder holder;
         if (view == null) {

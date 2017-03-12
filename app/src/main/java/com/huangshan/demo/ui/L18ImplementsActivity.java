@@ -1,11 +1,18 @@
 package com.huangshan.demo.ui;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import com.huangshan.demo.R;
 import com.huangshan.demo.bean.AttackSpellCardL18;
@@ -14,6 +21,8 @@ import com.huangshan.demo.bean.MC;
 import com.huangshan.demo.bean.MinionCardL18;
 import com.huangshan.demo.bean.SpellCardL18;
 import com.huangshan.demo.consts.GlobalConsts;
+
+import java.util.Random;
 
 public class L18ImplementsActivity extends AppCompatActivity {
 
@@ -58,6 +67,7 @@ public class L18ImplementsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
             }
         });
+
     }
 
     /**
