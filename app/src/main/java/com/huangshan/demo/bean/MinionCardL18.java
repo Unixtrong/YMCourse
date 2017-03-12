@@ -12,6 +12,13 @@ public class MinionCardL18 extends CardL18 {
         setName(name);
     }
 
+    public MinionCardL18(String name, int cost, int damage, int hp) {
+        setName(name);
+        setCost(cost);
+        setDamage(damage);
+        setHp(hp);
+    }
+
     @Override
     public String getName() {
         return super.getName();
@@ -29,10 +36,6 @@ public class MinionCardL18 extends CardL18 {
         Log.d(GlobalConsts.TAG, "你打出了一张随从牌");
     }
 
-    public String getType() {
-        return "随从牌";
-    }
-
     public int getHp() {
         return hp;
     }
@@ -40,5 +43,9 @@ public class MinionCardL18 extends CardL18 {
     public MinionCardL18 setHp(int hp) {
         this.hp = hp;
         return this;
+    }
+
+    public String getType() {
+        return "随从牌";
     }
 }

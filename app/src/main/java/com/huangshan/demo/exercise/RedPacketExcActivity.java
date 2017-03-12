@@ -1,4 +1,4 @@
-package com.huangshan.demo.ui;
+package com.huangshan.demo.exercise;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -7,7 +7,7 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context="com.huangshan.demo.ui.RedPacketExcActivity">
+    tools:context="com.huangshan.demo.exercise.RedPacketExcActivity">
 
     <EditText
         android:id="@+id/red_et_money"

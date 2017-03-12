@@ -16,6 +16,13 @@ public class AttackSpellCardL18 extends SpellCardL18 {
         System.out.println("HS 攻击法术卡牌 构造方法被调用了");
     }
 
+    public AttackSpellCardL18(String name, int cost, int damage) {
+        super(name);
+        this.setName(name);
+        this.setCost(cost);
+        this.setDamage(damage);
+    }
+
     public void setDamage(int damage) {
         this.damage = damage;
     }

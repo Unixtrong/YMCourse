@@ -25,7 +25,7 @@
         <activity android:name=".ui.L1Activity"/>
         <activity android:name=".ui.L2Activity"/>
         <activity android:name=".ui.L3Activity"/>
-        <activity android:name=".ui.LongL2Activity"/>
+        <activity android:name=".exercise.LongL2Activity"/>
         <activity android:name=".ui.L4Activity"/>
         <activity android:name=".ui.L5Activity"/>
         <activity android:name=".ui.L5bActivity"/>
@@ -40,8 +40,8 @@
         <activity android:name=".ui.L13LayoutActivity"/>
         <activity android:name=".ui.L14ExtendsActivity"/>
         <activity android:name=".ui.L15DialogActivity"/>
-        <activity android:name=".ui.RedPacketExcActivity"/>
-        <activity android:name=".ui.RedPacketExcReceiveActivity"/>
+        <activity android:name=".exercise.RedPacketExcActivity"/>
+        <activity android:name=".exercise.RedPacketExcReceiveActivity"/>
         <activity android:name=".ui.L17PreferenceActivity"/>
         <activity android:name=".ui.L18ImplementsActivity"/>
         <activity android:name=".ui.L19ArrayListActivity"/>

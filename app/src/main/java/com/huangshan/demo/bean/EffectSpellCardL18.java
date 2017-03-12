@@ -9,6 +9,11 @@ public class EffectSpellCardL18 extends SpellCardL18 {
         super(name);
     }
 
+    public EffectSpellCardL18(String name, int cost) {
+        super(name);
+        setCost(cost);
+    }
+
     @Override
     public void play() {
         Log.d(GlobalConsts.TAG, "你打出了一张效果法术卡牌");

@@ -45,45 +45,14 @@ public class L20And21BaseAdapterActivity extends AppCompatActivity implements Ad
 
     private void initData() {
         // 准备数据
-        MinionCardL18 cardOldBlindEyes = new MinionCardL18("老瞎眼");
-        cardOldBlindEyes.setCost(5);
-        cardOldBlindEyes.setDamage(4);
-        MinionCardL18 cardOldBlindEyes2 = new MinionCardL18("老瞎眼2");
-        cardOldBlindEyes2.setCost(5);
-        cardOldBlindEyes2.setDamage(4);
-        MinionCardL18 cardOldBlindEyes3 = new MinionCardL18("老瞎眼3");
-        cardOldBlindEyes3.setCost(5);
-        cardOldBlindEyes3.setDamage(4);
-        MinionCardL18 cardOldBlindEyes4 = new MinionCardL18("老瞎眼3");
-        cardOldBlindEyes4.setCost(5);
-        cardOldBlindEyes4.setDamage(4);
-        AttackSpellCardL18 cardFire = new AttackSpellCardL18("炎爆术");
-        cardFire.setCost(10);
-        cardFire.setDamage(10);
-        MinionCardL18 cardVan = new MinionCardL18("范达尔鹿盔");
-        cardVan.setCost(4);
-        cardVan.setHp(5);
-        cardVan.setDamage(3);
-        MinionCardL18 cardGromash = new MinionCardL18("格罗玛什·地狱咆哮");
-        cardGromash.setCost(10);
-        cardGromash.setDamage(10);
-        cardGromash.setHp(10);
-        EffectSpellCardL18 cardHxm = new EffectSpellCardL18("弃暗投明");
-        cardHxm.setCost(2);
-
-        // 添加到数据集合里
-        mData.add(cardOldBlindEyes);
-        mData.add(cardFire);
-        mData.add(cardOldBlindEyes2);
-        mData.add(cardFire);
-        mData.add(cardHxm);
-        mData.add(cardVan);
-        mData.add(cardGromash);
-        mData.add(cardVan);
-        mData.add(cardHxm);
-        mData.add(cardOldBlindEyes3);
-        mData.add(cardHxm);
-        mData.add(cardOldBlindEyes4);
+        mData.add(new MinionCardL18("老瞎眼", 5, 4, 5));
+        mData.add(new MinionCardL18("烈焰小鬼", 1, 3, 2));
+        mData.add(new MinionCardL18("虚空行者", 1, 1, 3));
+        mData.add(new MinionCardL18("着魔村民", 1, 1, 1));
+        mData.add(new MinionCardL18("范达尔鹿盔", 4, 5, 3));
+        mData.add(new MinionCardL18("格罗玛什·地狱咆哮", 10, 10, 10));
+        mData.add(new EffectSpellCardL18("弃暗投明", 2));
+        mData.add(new AttackSpellCardL18("炎爆术", 10, 10));
         sort();
 
         // 创建自己定义的 CardAdapter
@@ -136,7 +105,7 @@ public class L20And21BaseAdapterActivity extends AppCompatActivity implements Ad
         mListView.setOnItemClickListener(this);
         mListView.setOnItemLongClickListener(this);
 
-        // 假如有以下判断，都满足，这就是 JAVA 中的【多态】
+        // 假如有以下判断，都满足
         if (this instanceof AdapterView.OnItemClickListener) {
         }
         if (this instanceof Monster) {
