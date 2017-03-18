@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.huangshan.demo">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -46,9 +49,10 @@
         <activity android:name=".ui.L18ImplementsActivity"/>
         <activity android:name=".ui.L19ArrayListActivity"/>
         <activity android:name=".ui.L20And21BaseAdapterActivity"/>
-        <activity android:name=".exercise.PopupWindowActivity">
-        </activity>
-        <activity android:name=".ui.L22PopupWindowActivity">
+        <activity android:name=".exercise.PopupWindowActivity"/>
+        <activity android:name=".ui.L22PopupWindowActivity"/>
+        <activity android:name=".exercise.FileActivity"/>
+        <activity android:name=".ui.L23FileActivity">
         </activity>
     </application>
 

@@ -7,10 +7,8 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import com.huangshan.demo.R
-import com.huangshan.demo.ui.L18ImplementsActivity
-import com.huangshan.demo.ui.L19ArrayListActivity
-import com.huangshan.demo.ui.L20And21BaseAdapterActivity
-import com.huangshan.demo.ui.L22PopupWindowActivity
+import com.huangshan.demo.exercise.FileActivity
+import com.huangshan.demo.ui.*
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +28,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
+                L23FileActivity::class.java,
                 L22PopupWindowActivity::class.java,
                 L20And21BaseAdapterActivity::class.java,
                 L19ArrayListActivity::class.java,
