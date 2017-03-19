@@ -51,7 +51,7 @@
         <activity android:name=".ui.L20And21BaseAdapterActivity"/>
         <activity android:name=".exercise.PopupWindowActivity"/>
         <activity android:name=".ui.L22PopupWindowActivity"/>
-        <activity android:name=".exercise.FileActivity"/>
+        <activity android:name=".exercise.ExcFileActivity"/>
         <activity android:name=".ui.L23FileActivity">
         </activity>
     </application>

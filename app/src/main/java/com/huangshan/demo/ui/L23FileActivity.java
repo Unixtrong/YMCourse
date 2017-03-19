@@ -11,14 +11,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.huangshan.demo.R;
+import com.huangshan.demo.utils.Tools;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 
 public class L23FileActivity extends AppCompatActivity {
 
@@ -32,12 +31,31 @@ public class L23FileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_l23_file);
 
+        // 1 2 4 8 16 32 64 128 256 512 1024
         // byte
         // 1k = 1024 byte
         // 1 byte = 8 bit（位）
-        // 00000010
+        // 00000001 = 1 = 2^0
+        // 00000010 = 2 = 2^1
+        // 00000100 = 4 = 2^2
+        // 00001000 = 8 = 2^3
+        // 00001010 = 8 + 2 = 10
+        // 00001111 = 8 + 4 + 2 + 1 = 15
+        // 10000000 = 128 = 2^7
+        // 11111111 = 255 = 2^8 - 1
+        // 0 1111111
+        // 1 1111111
+        //100000000 = 2^8
         // 'a' 的大小是一个 byte
+        // Byte.MAX_VALUE == 2^7 - 1
+        // Integer.MAX_VALUE = 2^31 - 1 = 2^7 * 2^8 * 2^8 * 2^8 - 1;
+        // 01111111 11111111 11111111 11111111 = 2^31 - 1
+        // 11111111 11111111 11111111 11111111 = 2^32 - 1
+        //1 00000000 00000000 00000000 00000000 = 2^32
+        // 一个 int 型，占 4 个 byte
+        // int a = 1;
         initView();
+
     }
 
     private void initView() {
@@ -56,40 +74,30 @@ public class L23FileActivity extends AppCompatActivity {
         try {
             out = new FileOutputStream(file);
             out.write(input.getBytes());
-            out.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        try {
-            if (out != null) {
-                out.close();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Tools.closeStream(out);
     }
 
     public void load(View v) {
         File extCacheDir = getExternalCacheDir();
         File file = new File(extCacheDir, "L23.txt");
-        byte[] bytes = new byte[1024];
+        byte[] bytes = new byte[20];
         FileInputStream in = null;
+        String content = "";
         try {
             in = new FileInputStream(file);
-            int length = in.read(bytes);
-            Toast.makeText(this, "len: " + length, Toast.LENGTH_SHORT).show();
+            int len;
+            while ((len = in.read(bytes)) != -1) {
+                String currentContent = new String(bytes, 0, len);
+                content = content + currentContent;
+                Log.d(TAG, "nano:" + System.nanoTime() + " Length: " + len + " cur: " + currentContent);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        try {
-            if (in != null) {
-                in.close();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        String content = new String(bytes);
+        Tools.closeStream(in);
         mTvContent.setText(content);
     }
 

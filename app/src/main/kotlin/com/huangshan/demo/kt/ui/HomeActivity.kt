@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import com.huangshan.demo.R
-import com.huangshan.demo.exercise.FileActivity
+import com.huangshan.demo.exercise.ExcFileActivity
 import com.huangshan.demo.ui.*
 
 class HomeActivity : AppCompatActivity() {
@@ -28,6 +28,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
+                L17PreferenceActivity::class.java,
                 L23FileActivity::class.java,
                 L22PopupWindowActivity::class.java,
                 L20And21BaseAdapterActivity::class.java,

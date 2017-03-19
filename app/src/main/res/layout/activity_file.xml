@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.huangshan.demo.exercise.FileActivity">
+    tools:context="com.huangshan.demo.exercise.ExcFileActivity">
 
     <EditText
         android:id="@+id/exc_file_et"

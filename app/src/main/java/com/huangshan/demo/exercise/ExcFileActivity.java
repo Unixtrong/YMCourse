@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.huangshan.demo.R;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,7 +18,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Arrays;
 
-public class FileActivity extends AppCompatActivity {
+public class ExcFileActivity extends AppCompatActivity {
 
     private TextView mTvContent;
     private EditText mEtInput;
@@ -63,13 +64,17 @@ public class FileActivity extends AppCompatActivity {
     public void load(View view) {
         File file = new File(getExternalCacheDir(), "hello");
         FileInputStream in = null;
-        byte[] buffer = new byte[1024];
+        byte[] buffer = new byte[5];
         try {
             in = new FileInputStream(file);
-            int len = in.read(buffer);
-            byte[] res = Arrays.copyOf(buffer, len);
-            System.out.println("len: " + len + " buffer: " + Arrays.toString(res));
-            mTvContent.setText(new String(buffer, "UTF-8"));
+            int len;
+            String builder = "";
+            while ((len = in.read(buffer)) != -1) {
+                builder = builder + new String(buffer, 0, len);
+                byte[] res = Arrays.copyOf(buffer, len);
+                System.out.println("len: " + len + " buffer: " + Arrays.toString(res));
+            }
+            mTvContent.setText(builder);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
