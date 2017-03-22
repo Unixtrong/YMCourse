@@ -52,7 +52,9 @@
         <activity android:name=".exercise.PopupWindowActivity"/>
         <activity android:name=".ui.L22PopupWindowActivity"/>
         <activity android:name=".exercise.ExcFileActivity"/>
-        <activity android:name=".ui.L23FileActivity">
+        <activity android:name=".ui.L23AndL24FileActivity">
+        </activity>
+        <activity android:name=".ui.L25JsonActivity">
         </activity>
     </application>
 

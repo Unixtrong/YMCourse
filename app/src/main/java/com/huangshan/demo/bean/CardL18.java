@@ -41,4 +41,9 @@ public abstract class CardL18 {
     public abstract void play();
 
     public abstract String getType();
+
+    @Override
+    public String toString() {
+        return "CardL18 { name: " + name + " cost: " + getCost() + "}";
+    }
 }

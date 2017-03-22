@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.huangshan.demo.ui.L23FileActivity">
+    tools:context="com.huangshan.demo.ui.L23AndL24FileActivity">
 
     <EditText
         android:id="@+id/l23_et_input"

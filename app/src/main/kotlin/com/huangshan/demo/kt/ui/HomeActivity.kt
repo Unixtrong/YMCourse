@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import com.huangshan.demo.R
 import com.huangshan.demo.exercise.ExcFileActivity
+import com.huangshan.demo.exercise.ExcJson
 import com.huangshan.demo.ui.*
 
 class HomeActivity : AppCompatActivity() {
@@ -15,6 +16,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         initView()
+        println(ExcJson.hashMap())
     }
 
     private fun initView() {
@@ -28,12 +30,13 @@ class HomeActivity : AppCompatActivity() {
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
-                L17PreferenceActivity::class.java,
-                L23FileActivity::class.java,
+                L25JsonActivity::class.java,
+                L23AndL24FileActivity::class.java,
                 L22PopupWindowActivity::class.java,
                 L20And21BaseAdapterActivity::class.java,
                 L19ArrayListActivity::class.java,
-                L18ImplementsActivity::class.java
+                L18ImplementsActivity::class.java,
+                L17PreferenceActivity::class.java
         ).map(::ActivityInfo)
     }
 
@@ -49,7 +52,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     data class ActivityInfo(val clazz: Class<out Activity>) {
-        val regex = "(Kt|L)\\d{1,2}(And\\d{1,2})?".toRegex()
+        val regex = "((Kt|L)\\d{1,2}|Exc)(And\\d{1,2})?".toRegex()
         override fun toString(): String {
             return regex.find(clazz.simpleName)?.value?.replace("And", "&") + regex.replace(clazz.simpleName, " - ")
         }
