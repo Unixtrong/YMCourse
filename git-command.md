@@ -52,3 +52,47 @@ git rebase
 ```
 git push -u origin master
 ```
+
+- 查看工作区改动
+```
+git diff a.txt
+git diff
+```
+
+- 查看暂存区改动
+```
+git diff --cached
+```
+
+- 清除工作区改动
+```
+git checkout a.txt
+git checkout .
+```
+
+- 将暂存区改动回退至工作区
+```
+git reset HEAD a.txt
+git reset HEAD .
+```
+
+- 清除暂存区和工作区的内容
+```
+git reset HEAD --hard
+```
+
+- 将最后 n 次提交回退至工作区
+```
+git reset HEAD^^ // 2次提交
+git reset HEAD~3 // 3次提交
+```
+
+- 将最后 n 次提交清除（工作区也删除）
+```
+git reset HEAD^^ --hard
+```
+
+- 将某一次提交回滚（会生成新的回滚提交）
+```
+git revert sdlkfn3r4kn3gjtykt
+```
