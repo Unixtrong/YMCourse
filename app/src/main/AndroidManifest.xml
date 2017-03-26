@@ -58,6 +58,8 @@
         </activity>
         <activity android:name=".exercise.StandardNameActivity">
         </activity>
+        <activity android:name=".exercise.ExcShapeActivity">
+        </activity>
     </application>
 
 </manifest>
