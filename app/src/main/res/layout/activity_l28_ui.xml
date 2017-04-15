@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.huangshan.demo.ui.L28UiActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="原始"
+        android:textColor="#993333"
+        android:textSize="30sp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/l28_btn_bg"
+        android:text="丑丑的按钮"
+        android:textColor="#FFF"
+        android:textSize="30sp"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/l28_btn_bg_new"
+        android:text="圆形"
+        android:textColor="#FFF"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/l28_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/l28_btn_bg_selector"
+        android:padding="10dp"
+        android:text="正常的按钮"
+        android:textColor="@color/l28_btn_selector"
+        android:textSize="30sp"/>
+</LinearLayout>

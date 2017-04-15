@@ -60,6 +60,8 @@
         </activity>
         <activity android:name=".exercise.ExcShapeActivity">
         </activity>
+        <activity android:name=".ui.L28UiActivity">
+        </activity>
     </application>
 
 </manifest>

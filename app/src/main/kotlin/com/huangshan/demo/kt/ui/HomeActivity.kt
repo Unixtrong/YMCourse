@@ -30,6 +30,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
+                L28UiActivity::class.java,
                 L25JsonActivity::class.java,
                 L23AndL24FileActivity::class.java,
                 L22PopupWindowActivity::class.java,
