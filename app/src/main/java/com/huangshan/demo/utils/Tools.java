@@ -1,9 +1,7 @@
 package com.huangshan.demo.utils;
 
 import java.io.Closeable;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 
 /**
  * Author(s): danyun
@@ -18,5 +16,14 @@ public class Tools {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static int toInteger(String numberStr) {
+        try {
+            return Integer.parseInt(numberStr);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 }

@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import com.huangshan.demo.R
 import com.huangshan.demo.exercise.ExcJson
-import com.huangshan.demo.exercise.ExcProgressActivity
+import com.huangshan.demo.sample.BillActivity
 import com.huangshan.demo.ui.*
 
 class HomeActivity : AppCompatActivity() {
@@ -30,6 +30,8 @@ class HomeActivity : AppCompatActivity() {
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
+                BillActivity::class.java,
+                L30StyleActivity::class.java,
                 L29ProgressActivity::class.java,
                 L28UiActivity::class.java,
                 L25JsonActivity::class.java,

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">YMCourse</string>
+    <string name="bill_btn_text">记一笔</string>
 </resources>

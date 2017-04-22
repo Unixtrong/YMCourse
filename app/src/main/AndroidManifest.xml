@@ -66,6 +66,12 @@
         </activity>
         <activity android:name=".ui.L29ProgressActivity">
         </activity>
+        <activity android:name=".exercise.ExcBillActivity">
+        </activity>
+        <activity android:name=".ui.L30StyleActivity">
+        </activity>
+        <activity android:name=".sample.BillActivity">
+        </activity>
     </application>
 
 </manifest>
