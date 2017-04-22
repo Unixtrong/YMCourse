@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEE"
+    android:padding="10dp"
+    tools:context="com.huangshan.demo.ui.L31RelativeActivity">
+
+    <LinearLayout
+        android:id="@+id/l31_ll_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$1000"
+            android:textSize="50sp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Bill"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/l31_rl_message_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/l31_ll_money"
+        android:paddingRight="80dp">
+
+        <TextView
+            android:id="@+id/l31_tv_time_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="昨天 18:45"/>
+
+        <ImageView
+            android:id="@+id/l31_iv_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/l31_tv_time_left"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/ic_hearthstone_minion"/>
+
+        <TextView
+            android:id="@+id/l31_tv_message_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/l31_iv_avatar"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/l31_iv_avatar"
+            android:background="@mipmap/icon_message_left"
+            android:gravity="center_vertical"
+            android:text="阿丹阿丹，晚上吃啥？"
+            android:textColor="#000"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/l31_rl_message_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/l31_rl_message_left"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="80dp">
+
+        <ImageView
+            android:id="@+id/l31_iv_avatar_right"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_hearthstone_spell"/>
+
+        <TextView
+            android:id="@+id/l31_tv_message_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/l31_iv_avatar_right"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/l31_iv_avatar_right"
+            android:background="@mipmap/icon_message_right"
+            android:gravity="center_vertical"
+            android:text="吃兹吧！"
+            android:textColor="#000"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/l31_rl_message_left2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/l31_rl_message_right"
+        android:layout_marginTop="20dp"
+        android:paddingRight="80dp">
+
+        <TextView
+            android:id="@+id/l31_tv_time_left2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="昨天 19:05"/>
+
+        <ImageView
+            android:id="@+id/l31_iv_avatar2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/l31_tv_time_left2"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/ic_hearthstone_minion"/>
+
+        <TextView
+            android:id="@+id/l31_tv_message_left2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/l31_iv_avatar2"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/l31_iv_avatar2"
+            android:background="@mipmap/icon_message_left"
+            android:gravity="center_vertical"
+            android:text="屌屌屌……屌屌屌……屌屌屌……屌屌屌……屌屌屌……屌屌屌……屌屌屌……屌屌屌……屌屌屌……屌屌屌……屌屌屌……屌屌屌……屌屌屌……屌屌屌……屌屌屌……屌屌屌……屌屌屌……屌屌屌……"
+            android:textColor="#000"/>
+    </RelativeLayout>
+</RelativeLayout>

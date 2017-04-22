@@ -30,6 +30,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
+                L31RelativeActivity::class.java,
                 BillActivity::class.java,
                 L30StyleActivity::class.java,
                 L29ProgressActivity::class.java,
