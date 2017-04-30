@@ -4,25 +4,31 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.ListView;
 
 import com.huangshan.demo.R;
+import com.huangshan.demo.bean.ImdbResult;
+import com.huangshan.demo.bean.Movie;
+import com.huangshan.demo.ui.adapter.MovieAdapter;
+
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 
-public class L32HttpActiviy extends AppCompatActivity {
+public class L32And33HttpActivity extends AppCompatActivity {
 
-    private TextView mContentTextView;
+    private ListView mMoviesListView;
+    private MovieAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_l32_http_activiy);
-        mContentTextView = (TextView) findViewById(R.id.l32_tv_content);
+        mMoviesListView = (ListView) findViewById(R.id.l33_lv_movies);
     }
 
     public void startRequest(View view) {
@@ -30,11 +36,14 @@ public class L32HttpActiviy extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    final String result = requestImdb("Avengers");
+                    String json = requestImdb("Avengers");
+                    ImdbResult result = ImdbResult.fill(new JSONObject(json));
+                    final List<Movie> movies = Movie.fillList(result.getSearch());
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            mContentTextView.setText(result);
+                            mAdapter = new MovieAdapter(L32And33HttpActivity.this, movies);
+                            mMoviesListView.setAdapter(mAdapter);
                         }
                     });
                 } catch (Exception e) {

@@ -19,7 +19,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class L23AndL24FileActivity extends AppCompatActivity {
+public class L23And24FileActivity extends AppCompatActivity {
 
     private static final String TAG = "L23";
 

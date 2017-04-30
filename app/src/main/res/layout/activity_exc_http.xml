@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.huangshan.demo.exercise.ExcHttpActivity">
 
     <Button
@@ -12,15 +13,9 @@
         android:onClick="requestImdb"
         android:text="start"/>
 
-    <ScrollView
+    <ListView
+        android:id="@+id/exc_lv_movies"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/exc_tv_imdb"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </ScrollView>
-
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

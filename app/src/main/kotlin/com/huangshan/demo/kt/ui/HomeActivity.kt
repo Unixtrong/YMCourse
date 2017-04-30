@@ -31,15 +31,14 @@ class HomeActivity : AppCompatActivity() {
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
-                L32HttpActiviy::class.java,
-                ExcHttpActivity::class.java,
+                L32And33HttpActivity::class.java,
                 L31RelativeActivity::class.java,
                 BillActivity::class.java,
                 L30StyleActivity::class.java,
                 L29ProgressActivity::class.java,
                 L28UiActivity::class.java,
                 L25JsonActivity::class.java,
-                L23AndL24FileActivity::class.java,
+                L23And24FileActivity::class.java,
                 L22PopupWindowActivity::class.java,
                 L20And21BaseAdapterActivity::class.java,
                 L19ArrayListActivity::class.java,

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.huangshan.demo.ui.L32HttpActiviy">
+    tools:context="com.huangshan.demo.ui.L32And33HttpActivity">
 
     <EditText
         android:layout_width="match_parent"
@@ -18,13 +18,8 @@
         android:onClick="startRequest"
         android:text="请求"/>
 
-    <ScrollView
+    <ListView
+        android:id="@+id/l33_lv_movies"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/l32_tv_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </ScrollView>
+        android:layout_height="match_parent"/>
 </LinearLayout>

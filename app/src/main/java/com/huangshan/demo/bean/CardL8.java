@@ -11,6 +11,17 @@ public class CardL8 {
     private int imageId;
     private String description;
 
+    public void testForL33A() {
+        System.out.println("testA, name: " + name);
+    }
+
+    public void testForL33B() {
+        System.out.println("testB, name: " + name);
+        CardL8 card = new CardL8();
+        card.setName("Along");
+        card.testForL33A();
+    }
+
     public String getName() {
         return name;
     }
