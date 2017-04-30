@@ -72,32 +72,36 @@ public class MovieAdapter extends BaseAdapter {
         final Movie movie = mMovieList.get(position);
         holder.mTitleTextView.setText(movie.getTitle());
         holder.mYearTextView.setText(movie.getYear());
+        handlePoster(holder.mPosterImageView, movie);
+        return convertView;
+    }
 
-        // 通过判断 movie 对象中的 bitmap 属性，只进行一次图片下载
-        // 在图片未下载时，展示默认图
+    /**
+     * 通过判断 movie 对象中的 bitmap 属性，只进行一次图片下载
+     * 在图片未下载时，展示默认图
+     */
+    private void handlePoster(final ImageView imageView, final Movie movie) {
         if (movie.getPosterBitmap() == null) {
-            holder.mPosterImageView.setImageResource(R.mipmap.ic_launcher);
+            imageView.setImageResource(R.mipmap.ic_launcher);
             final String urlAddress = movie.getPosterUrl();
             new Thread(new Runnable() {
                 @Override
                 public void run() {
                     try {
                         // 下载图片数据
-                        final Bitmap bitmap = downloadImage(urlAddress);
+                        final Bitmap bitmap = downloadPoster(urlAddress);
                         // 把下载到的图片放入 movie 对象
                         movie.setPosterBitmap(bitmap);
                         // 将图片绑定到 imageView 控件上
-                        bindBitmap(holder.mPosterImageView, bitmap);
+                        bindBitmap(imageView, bitmap);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 }
             }).start();
         } else {
-            holder.mPosterImageView.setImageBitmap(movie.getPosterBitmap());
+            imageView.setImageBitmap(movie.getPosterBitmap());
         }
-
-        return convertView;
     }
 
     private void bindBitmap(final ImageView imageView, final Bitmap bitmap) {
@@ -114,7 +118,7 @@ public class MovieAdapter extends BaseAdapter {
         }
     }
 
-    private Bitmap downloadImage(String urlAddress) throws IOException {
+    private Bitmap downloadPoster(String urlAddress) throws IOException {
         urlAddress = urlAddress.replace("300.jpg", "100.jpg");
         URL url = new URL(urlAddress);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
