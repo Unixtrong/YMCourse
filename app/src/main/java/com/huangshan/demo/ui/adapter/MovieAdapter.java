@@ -52,7 +52,7 @@ public class MovieAdapter extends BaseAdapter {
     public long getItemId(int position) {
         Movie movie = mMovieList.get(position);
         String imdbId = movie.getImdbId();
-        imdbId = imdbId.substring(0, 2);
+        imdbId = imdbId.substring(2, imdbId.length());
         return Long.parseLong(imdbId);
     }
 
