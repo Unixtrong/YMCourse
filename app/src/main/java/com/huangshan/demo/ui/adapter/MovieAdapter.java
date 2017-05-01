@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.huangshan.demo.R;
 import com.huangshan.demo.bean.Movie;
+import com.huangshan.demo.utils.Tools;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -120,6 +121,7 @@ public class MovieAdapter extends BaseAdapter {
 
     private Bitmap downloadPoster(String urlAddress) throws IOException {
         urlAddress = urlAddress.replace("300.jpg", "100.jpg");
+        Tools.debug("downloadPoster, url: " + urlAddress);
         URL url = new URL(urlAddress);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setConnectTimeout(10 * 1000);

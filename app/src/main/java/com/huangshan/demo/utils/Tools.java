@@ -1,5 +1,7 @@
 package com.huangshan.demo.utils;
 
+import android.util.Log;
+
 import java.io.Closeable;
 import java.io.IOException;
 
@@ -8,6 +10,10 @@ import java.io.IOException;
  * Date: 2017/3/20
  */
 public class Tools {
+    public static void debug(String msg) {
+        Log.d("YM", msg);
+    }
+
     public static void closeStream(Closeable stream) {
         try {
             if (stream != null) {

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.huangshan.demo.R;
@@ -23,20 +24,27 @@ public class L32And33HttpActivity extends AppCompatActivity {
 
     private ListView mMoviesListView;
     private MovieAdapter mAdapter;
+    private EditText mSearchEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_l32_http_activiy);
+        initView();
+    }
+
+    private void initView() {
         mMoviesListView = (ListView) findViewById(R.id.l33_lv_movies);
+        mSearchEditText = (EditText) findViewById(R.id.l33_et_input);
     }
 
     public void startRequest(View view) {
+        final String searchKeyword = mSearchEditText.getText().toString();
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    String json = requestImdb("Avengers");
+                    String json = requestImdb(searchKeyword);
                     ImdbResult result = ImdbResult.fill(new JSONObject(json));
                     final List<Movie> movies = Movie.fillList(result.getSearch());
                     runOnUiThread(new Runnable() {
