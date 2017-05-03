@@ -10,31 +10,35 @@ public class Ninja {
         return mId;
     }
 
-    public void setId(int id) {
-        this.mId = id;
+    public Ninja setId(int id) {
+        mId = id;
+        return this;
     }
 
     public String getName() {
         return mName;
     }
 
-    public void setName(String name) {
-        this.mName = name;
+    public Ninja setName(String name) {
+        mName = name;
+        return this;
     }
 
     public int getAttack() {
         return mAttack;
     }
 
-    public void setAttack(int attack) {
-        this.mAttack = attack;
+    public Ninja setAttack(int attack) {
+        mAttack = attack;
+        return this;
     }
 
     public int getHp() {
         return mHp;
     }
 
-    public void setHp(int hp) {
-        this.mHp = hp;
+    public Ninja setHp(int hp) {
+        mHp = hp;
+        return this;
     }
 }

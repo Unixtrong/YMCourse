@@ -40,17 +40,8 @@ public class L8TestActivity extends AppCompatActivity {
         mBattleLog = "战斗日志：";
         mTvBattleLog.setText(mBattleLog);
 
-        mNinjaEnemy = new Ninja();
-        mNinjaEnemy.setName("阿迪王");
-        mNinjaEnemy.setAttack(20);
-        mNinjaEnemy.setHp(20);
-        mNinjaEnemy.setId(2);
-
-        mNinjaYou = new Ninja();
-        mNinjaYou.setName("神小虎");
-        mNinjaYou.setAttack(5);
-        mNinjaYou.setHp(25);
-        mNinjaYou.setId(1);
+        mNinjaEnemy = new Ninja().setName("阿迪王").setAttack(20).setHp(20).setId(2);
+        mNinjaYou = new Ninja().setName("神小虎").setAttack(5).setHp(25).setId(1);
 
         mBtnEnemy.setText(formatNinjaInfo(mNinjaEnemy));
         mBtnYou.setText(formatNinjaInfo(mNinjaYou));
