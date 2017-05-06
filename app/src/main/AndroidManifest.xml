@@ -79,6 +79,10 @@
         </activity>
         <activity android:name=".ui.L32And33HttpActivity">
         </activity>
+        <activity android:name=".exercise.ExcExceptionActivity">
+        </activity>
+        <activity android:name=".ui.L34ExceptionActivity">
+        </activity>
     </application>
 
 </manifest>

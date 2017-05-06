@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import com.huangshan.demo.R
-import com.huangshan.demo.exercise.ExcHttpActivity
+import com.huangshan.demo.exercise.ExcExceptionActivity
 import com.huangshan.demo.exercise.ExcJson
 import com.huangshan.demo.sample.BillActivity
 import com.huangshan.demo.ui.*
@@ -31,6 +31,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
+                L34ExceptionActivity::class.java,
                 L32And33HttpActivity::class.java,
                 L31RelativeActivity::class.java,
                 BillActivity::class.java,

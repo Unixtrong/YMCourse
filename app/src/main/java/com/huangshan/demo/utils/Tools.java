@@ -14,6 +14,10 @@ public class Tools {
         Log.d("YM", msg);
     }
 
+    public static void warn(String msg, Throwable tr) {
+        Log.w("YM", msg, tr);
+    }
+
     public static void closeStream(Closeable stream) {
         try {
             if (stream != null) {
