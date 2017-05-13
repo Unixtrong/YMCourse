@@ -83,6 +83,18 @@
         </activity>
         <activity android:name=".ui.L34ExceptionActivity">
         </activity>
+        <activity
+            android:name=".exercise.ExcLifecycleActivity"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name=".exercise.ExcLifecycleActivity2">
+        </activity>
+        <activity
+            android:name=".ui.L35LifecycleActivity"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name=".ui.L35Lifecycle2Activity">
+        </activity>
     </application>
 
 </manifest>
