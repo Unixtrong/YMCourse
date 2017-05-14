@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import com.huangshan.demo.R
+import com.huangshan.demo.exercise.ExcDaoActivity
 import com.huangshan.demo.exercise.ExcJson
 import com.huangshan.demo.sample.BillActivity
 import com.huangshan.demo.ui.*
@@ -30,6 +31,8 @@ class HomeActivity : AppCompatActivity() {
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
+                L37DaoActivity::class.java,
+                ExcDaoActivity::class.java,
                 L36MusicActivity::class.java,
                 L35LifecycleActivity::class.java,
                 L34ExceptionActivity::class.java,
@@ -61,9 +64,10 @@ class HomeActivity : AppCompatActivity() {
     }
 
     data class ActivityInfo(val clazz: Class<out Activity>) {
-        val regex = "((Kt|L)\\d{1,2}|Exc)(And\\d{1,2})?".toRegex()
+        val regex = "((Kt|L)\\d{1,2}|Exc(^e))(And\\d{1,2})?".toRegex()
         override fun toString(): String {
-            return regex.find(clazz.simpleName)?.value?.replace("And", "&") + regex.replace(clazz.simpleName, " - ")
+            val name = clazz.simpleName
+            return (regex.find(name)?.value?.replace("And", "&") ?: "App - ") + regex.replace(name, " - ")
         }
     }
 }

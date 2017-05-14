@@ -26,13 +26,13 @@ public class L36MusicService extends Service implements MediaPlayer.OnCompletion
 
     @Override
     public void onCreate() {
-        Tools.debug("onCreate");
+        Tools.debug("L36MusicService onCreate");
         super.onCreate();
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Tools.debug("onStartCommand");
+        Tools.debug("L36MusicService onStartCommand");
         String action = intent.getAction();
         switch (action) {
             case MusicActions.PLAY:
@@ -44,13 +44,16 @@ public class L36MusicService extends Service implements MediaPlayer.OnCompletion
             case MusicActions.STOP:
                 stop();
                 break;
+            case MusicActions.STOP_SERVICE:
+                stopMusicService();
+                break;
         }
         return super.onStartCommand(intent, flags, startId);
     }
 
     @Override
     public void onDestroy() {
-        Tools.debug("onDestroy");
+        Tools.debug("L36MusicService onDestroy");
         super.onDestroy();
     }
 
@@ -78,10 +81,21 @@ public class L36MusicService extends Service implements MediaPlayer.OnCompletion
         }
     }
 
+    /**
+     * sdf
+     */
     private void stop() {
-        mMediaPlayer.reset();
-        mMediaPlayer.release();
-        mNeedSetSource = true;
+        // 234
+        if (!mNeedSetSource/* && mMediaPlayer != null*/) {
+            mMediaPlayer.reset();
+            mMediaPlayer.release();
+            mNeedSetSource = true;
+        }
+    }
+
+    private void stopMusicService() {
+        stop();
+        stopService(new Intent(this, L36MusicService.class));
     }
 
     @Override

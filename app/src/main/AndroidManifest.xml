@@ -108,6 +108,11 @@
             android:enabled="true"
             android:exported="true">
         </service>
+
+        <activity android:name=".exercise.ExcDaoActivity">
+        </activity>
+        <activity android:name=".ui.L37DaoActivity">
+        </activity>
     </application>
 
 </manifest>

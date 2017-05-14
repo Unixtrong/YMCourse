@@ -9,4 +9,5 @@ public class MusicActions {
     public static final String PLAY = PREFIX + "play";
     public static final String PAUSE = PREFIX + "pause";
     public static final String STOP = PREFIX + "stop";
+    public static final String STOP_SERVICE = PREFIX + "stop_service";
 }

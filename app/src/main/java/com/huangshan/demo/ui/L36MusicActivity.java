@@ -80,4 +80,11 @@ public class L36MusicActivity extends AppCompatActivity {
         intent.setAction(MusicActions.STOP);
         startService(intent);
     }
+
+    public void stopService(View view) {
+        Intent intent = new Intent(this, L36MusicService.class);
+        Tools.debug("L36MusicActivity stop service");
+        intent.setAction(MusicActions.STOP_SERVICE);
+        startService(intent);
+    }
 }

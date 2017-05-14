@@ -53,4 +53,10 @@
             android:onClick="stop"
             android:text="停止"/>
     </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="stopService"
+        android:text="停止服务"/>
 </LinearLayout>
