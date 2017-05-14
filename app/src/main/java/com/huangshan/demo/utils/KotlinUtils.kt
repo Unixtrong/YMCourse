@@ -11,5 +11,5 @@ fun debug(msg: String) {
     val ste = Throwable().stackTrace[1]
     val className = ste.className
     val methodName = ste.methodName
-    Log.d("ym", "$className $methodName, $msg")
+    Log.d("YM", "$className $methodName, $msg")
 }

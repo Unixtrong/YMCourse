@@ -95,6 +95,19 @@
         </activity>
         <activity android:name=".ui.L35Lifecycle2Activity">
         </activity>
+
+        <service android:name=".exercise.ExcMusicService"/>
+
+        <activity android:name=".exercise.ExcMusicActivity">
+        </activity>
+        <activity android:name=".ui.L36MusicActivity">
+        </activity>
+
+        <service
+            android:name=".service.L36MusicService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
     </application>
 
 </manifest>

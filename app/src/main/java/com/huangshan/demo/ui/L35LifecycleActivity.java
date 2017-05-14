@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.huangshan.demo.R;
-import com.huangshan.demo.bean.GameTeam;
 import com.huangshan.demo.utils.Tools;
 
 public class L35LifecycleActivity extends AppCompatActivity {

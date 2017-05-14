@@ -8,7 +8,6 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import com.huangshan.demo.R
 import com.huangshan.demo.exercise.ExcJson
-import com.huangshan.demo.exercise.ExcLifecycleActivity
 import com.huangshan.demo.sample.BillActivity
 import com.huangshan.demo.ui.*
 
@@ -31,6 +30,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
+                L36MusicActivity::class.java,
                 L35LifecycleActivity::class.java,
                 L34ExceptionActivity::class.java,
                 L32And33HttpActivity::class.java,
