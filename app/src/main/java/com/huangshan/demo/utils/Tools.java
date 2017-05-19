@@ -1,6 +1,8 @@
 package com.huangshan.demo.utils;
 
+import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -35,5 +37,9 @@ public class Tools {
             e.printStackTrace();
         }
         return 0;
+    }
+
+    public static void toast(Context context, String msg) {
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
     }
 }

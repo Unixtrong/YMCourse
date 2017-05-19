@@ -48,7 +48,8 @@ public class HeroAdapter extends BaseAdapter {
             holder = new Holder();
             convertView = mInflater.inflate(R.layout.adapter_hero, parent, false);
             holder.mNameTextView = (TextView) convertView.findViewById(R.id.l37_tv_name);
-            holder.mSexTextView = (TextView) convertView.findViewById(R.id.l37_tv_sex);
+            holder.mGenderTextView = (TextView) convertView.findViewById(R.id.l37_tv_gender);
+            holder.mTeamTextView = (TextView) convertView.findViewById(R.id.l37_tv_team);
             holder.mDescTextView = (TextView) convertView.findViewById(R.id.l37_tv_desc);
             convertView.setTag(holder);
         } else {
@@ -59,28 +60,43 @@ public class HeroAdapter extends BaseAdapter {
         holder.mNameTextView.setText(hero.getName());
         holder.mDescTextView.setText(hero.getDescription());
 
-        String sex;
+        String gender;
         switch (hero.getGender()) {
             case HeroBean.GENDER_MALE:
-                sex = "男";
+                gender = "男";
                 break;
             case HeroBean.GENDER_FEMALE:
-                sex = "女";
+                gender = "女";
                 break;
             case HeroBean.GENDER_UNKNOWN:
-                sex = "未知";
+                gender = "未知";
                 break;
             default:
-                sex = "未知";
+                gender = "未知";
                 break;
         }
-        holder.mSexTextView.setText(sex);
+        holder.mGenderTextView.setText(gender);
+
+        String team;
+        switch (hero.getTeam()) {
+            case HeroBean.TEAM_AVENGERS:
+                team = "复仇者联盟";
+                break;
+            case HeroBean.TEAM_GUARDIAN_OF_GALAXY:
+                team = "银河护卫队";
+                break;
+            default:
+                team = "其他";
+                break;
+        }
+        holder.mTeamTextView.setText(team);
         return convertView;
     }
 
     private class Holder {
         TextView mNameTextView;
-        TextView mSexTextView;
+        TextView mGenderTextView;
+        TextView mTeamTextView;
         TextView mDescTextView;
     }
 }

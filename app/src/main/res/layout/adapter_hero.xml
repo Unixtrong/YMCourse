@@ -14,13 +14,22 @@
         android:textSize="25sp"/>
 
     <TextView
-        android:id="@+id/l37_tv_sex"
+        android:id="@+id/l37_tv_gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/l37_tv_name"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@+id/l37_tv_name"
         android:text="gender"/>
+
+    <TextView
+        android:id="@+id/l37_tv_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/l37_tv_name"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/l37_tv_gender"
+        android:text="team"/>
 
     <TextView
         android:id="@+id/l37_tv_desc"
