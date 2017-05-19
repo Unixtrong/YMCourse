@@ -5,12 +5,12 @@ package com.huangshan.demo.bean;
  * Date: 2017/5/14
  */
 public class HeroBean {
-    public static final int SEX_MALE = 1;
-    public static final int SEX_FEMALE = 2;
-    public static final int SEX_UNKNOWN = 3;
+    public static final int GENDER_MALE = 1;
+    public static final int GENDER_FEMALE = 2;
+    public static final int GENDER_UNKNOWN = 3;
 
     private String mName;
-    private int mSex;
+    private int mGender;
     private String mDescription;
 
     public String getName() {
@@ -22,12 +22,12 @@ public class HeroBean {
         return this;
     }
 
-    public int getSex() {
-        return mSex;
+    public int getGender() {
+        return mGender;
     }
 
-    public HeroBean setSex(int sex) {
-        mSex = sex;
+    public HeroBean setGender(int gender) {
+        mGender = gender;
         return this;
     }
 

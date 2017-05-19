@@ -20,7 +20,7 @@
         android:layout_alignBottom="@+id/l37_tv_name"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@+id/l37_tv_name"
-        android:text="sex"/>
+        android:text="gender"/>
 
     <TextView
         android:id="@+id/l37_tv_desc"

@@ -23,7 +23,7 @@ public class DaoHelper extends SQLiteOpenHelper {
         String sql = "CREATE TABLE " + TableHero.TABLE_NAME + "(" +
                 TableHero._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 TableHero.COL_NAME + " TEXT, " +
-                TableHero.COL_SEX + " INTEGER, " +
+                TableHero.COL_GENDER + " INTEGER, " +
                 TableHero.COL_DESCRIPTION + " TEXT)";
         Tools.debug("SQL: " + sql);
         db.execSQL(sql);

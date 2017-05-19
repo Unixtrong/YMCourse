@@ -60,14 +60,14 @@ public class HeroAdapter extends BaseAdapter {
         holder.mDescTextView.setText(hero.getDescription());
 
         String sex;
-        switch (hero.getSex()) {
-            case HeroBean.SEX_MALE:
+        switch (hero.getGender()) {
+            case HeroBean.GENDER_MALE:
                 sex = "男";
                 break;
-            case HeroBean.SEX_FEMALE:
+            case HeroBean.GENDER_FEMALE:
                 sex = "女";
                 break;
-            case HeroBean.SEX_UNKNOWN:
+            case HeroBean.GENDER_UNKNOWN:
                 sex = "未知";
                 break;
             default:
