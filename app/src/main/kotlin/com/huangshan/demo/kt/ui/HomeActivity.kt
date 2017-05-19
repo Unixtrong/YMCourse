@@ -31,7 +31,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
-                L37DaoActivity::class.java,
+                L37And38DaoActivity::class.java,
                 ExcDaoActivity::class.java,
                 L36MusicActivity::class.java,
                 L35LifecycleActivity::class.java,

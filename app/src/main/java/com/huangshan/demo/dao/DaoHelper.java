@@ -22,7 +22,7 @@ public class DaoHelper extends SQLiteOpenHelper {
         // 创建数据库时会调用
         String sql = "CREATE TABLE " + TableHero.TABLE_NAME + "(" +
                 TableHero._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                TableHero.COL_NAME + " TEXT, " +
+                TableHero.COL_NAME + " TEXT UNIQUE, " +
                 TableHero.COL_GENDER + " INTEGER, " +
                 TableHero.COL_TEAM + " INTEGER, " +
                 TableHero.COL_DESCRIPTION + " TEXT)";

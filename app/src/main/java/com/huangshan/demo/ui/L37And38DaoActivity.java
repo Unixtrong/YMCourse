@@ -13,12 +13,13 @@ import com.huangshan.demo.bean.HeroBean;
 import com.huangshan.demo.consts.TableHero;
 import com.huangshan.demo.dao.DaoHelper;
 import com.huangshan.demo.ui.adapter.HeroAdapter;
+import com.huangshan.demo.utils.Tools;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class L37DaoActivity extends AppCompatActivity {
+public class L37And38DaoActivity extends AppCompatActivity {
 
     private SQLiteDatabase mWdb;
     private ListView mListView;
@@ -57,6 +58,8 @@ public class L37DaoActivity extends AppCompatActivity {
         mOriginalData.add(new HeroBean("索尔", HeroBean.GENDER_MALE, HeroBean.TEAM_AVENGERS, "「雷神」，阿兹嘉德王储"));
         mOriginalData.add(new HeroBean("布鲁斯·班纳", HeroBean.GENDER_MALE, HeroBean.TEAM_AVENGERS, "浩克"));
         mOriginalData.add(new HeroBean("娜塔莎·罗曼诺夫", HeroBean.GENDER_FEMALE, HeroBean.TEAM_AVENGERS, "「黑寡妇」"));
+        HeroBean heroBean = new HeroBean();
+
     }
 
     private void initDatabase() {
@@ -80,9 +83,22 @@ public class L37DaoActivity extends AppCompatActivity {
         cv.put(TableHero.COL_TEAM, hero.getTeam());
         cv.put(TableHero.COL_DESCRIPTION, hero.getDescription());
 
-        mWdb.insert(TableHero.TABLE_NAME, null, cv);
-        mData.add(hero);
-        mAdapter.notifyDataSetChanged();
+        long rowId = mWdb.insert(TableHero.TABLE_NAME, null, cv);
+        Tools.debug("rowId: " + rowId);
+        if (rowId != -1) {
+            mData.add(hero);
+            mAdapter.notifyDataSetChanged();
+        }
+
+        // 插入数据冲突时，自行捕获异常
+        // try {
+        //     mWdb.insertOrThrow(TableHero.TABLE_NAME, null, cv);
+        // } catch (SQLException e) {
+        //     e.printStackTrace();
+        // }
+
+        // 自定义冲突策略
+        //mWdb.insertWithOnConflict(TableHero.TABLE_NAME, null, cv, SQLiteDatabase.CONFLICT_REPLACE);
     }
 
     public void delete(View view) {
@@ -92,21 +108,32 @@ public class L37DaoActivity extends AppCompatActivity {
     }
 
     public void query(View view) {
-        String selection = TableHero.COL_TEAM + "=?";
-        String[] selectionArgs = {"" + HeroBean.TEAM_GUARDIAN_OF_GALAXY};
-        Cursor cursor = mRdb.query(TableHero.TABLE_NAME, null, selection, selectionArgs, null, null, null);
-        List<HeroBean> dataList = new ArrayList<>();
+        // 查询银河护卫队女性成员的名字和描述，并按照名字排列
+        // String[] columns = {TableHero.COL_NAME, TableHero.COL_DESCRIPTION};
+        // String selection = TableHero.COL_TEAM + " = ? AND " + TableHero.COL_GENDER + " = ?";
+        // String[] selectionArgs = {HeroBean.TEAM_GUARDIAN_OF_GALAXY + "", HeroBean.GENDER_FEMALE + ""};
+
+        // 查询银河护卫队女性成员的所有属性，并按照名字排列
+        // String selection = TableHero.COL_TEAM + " = ? AND " + TableHero.COL_GENDER + " = ?";
+        // String[] selectionArgs = {HeroBean.TEAM_GUARDIAN_OF_GALAXY + "", HeroBean.GENDER_FEMALE + ""};
+        // String orderBy = TableHero.COL_NAME;
+
+        List<HeroBean> list = new ArrayList<>();
+        // 查询所有数据，并按照名字排列
+        String orderBy = TableHero.COL_NAME;
+        Cursor cursor = mRdb.query(TableHero.TABLE_NAME, null, null, null, null, null, orderBy);
         while (cursor.moveToNext()) {
             String name = cursor.getString(cursor.getColumnIndex(TableHero.COL_NAME));
             int gender = cursor.getInt(cursor.getColumnIndex(TableHero.COL_GENDER));
             int team = cursor.getInt(cursor.getColumnIndex(TableHero.COL_TEAM));
             String desc = cursor.getString(cursor.getColumnIndex(TableHero.COL_DESCRIPTION));
-            dataList.add(new HeroBean(name, gender, team, desc));
+            list.add(new HeroBean(name, gender, team, desc));
+            Tools.debug("name: " + name + " desc: " + desc);
         }
         cursor.close();
 
         mData.clear();
-        mData.addAll(dataList);
+        mData.addAll(list);
         mAdapter.notifyDataSetChanged();
     }
 
