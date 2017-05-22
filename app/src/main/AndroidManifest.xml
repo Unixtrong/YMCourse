@@ -111,7 +111,7 @@
 
         <activity android:name=".exercise.ExcDaoActivity">
         </activity>
-        <activity android:name=".ui.L37And38DaoActivity">
+        <activity android:name=".ui.L37And39DaoActivity">
         </activity>
     </application>
 

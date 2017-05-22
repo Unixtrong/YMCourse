@@ -12,10 +12,22 @@ public class HeroBean {
     public static final int TEAM_GUARDIAN_OF_GALAXY = 1;
     public static final int TEAM_AVENGERS = 2;
 
+    private int mDbId;
     private String mName;
     private int mGender;
     private int mTeam;
     private String mDescription;
+
+    public static int convertGender(String genderStr) {
+        switch (genderStr) {
+            case "男":
+                return GENDER_MALE;
+            case "女":
+                return GENDER_FEMALE;
+            default:
+                return GENDER_UNKNOWN;
+        }
+    }
 
     public HeroBean() {
     }
@@ -60,6 +72,15 @@ public class HeroBean {
 
     public HeroBean setDescription(String description) {
         mDescription = description;
+        return this;
+    }
+
+    public int getDbId() {
+        return mDbId;
+    }
+
+    public HeroBean setDbId(int dbId) {
+        mDbId = dbId;
         return this;
     }
 }

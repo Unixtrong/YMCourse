@@ -12,6 +12,7 @@
         android:layout_height="wrap_content">
 
         <Button
+            style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -19,25 +20,53 @@
             android:text="增"/>
 
         <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="delete"
-            android:text="删"/>
-
-        <Button
+            style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="query"
             android:text="查"/>
+    </LinearLayout>
 
-        <Button
+    <LinearLayout
+        android:id="@+id/l38_ll_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/l38_tv_filter_gender"
+            style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="update"
-            android:text="改"/>
+            android:gravity="center"
+            android:onClick="filter"
+            android:padding="10dp"
+            android:text="性别 ↓️"/>
+
+        <TextView
+            android:id="@+id/l38_tv_filter_team"
+            style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="filter"
+            android:padding="10dp"
+            android:text="组织 ↓"/>
+
+        <TextView
+            android:id="@+id/l38_tv_sort"
+            style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="filter"
+            android:padding="10dp"
+            android:text="排序 ↓"/>
+
     </LinearLayout>
 
     <ListView

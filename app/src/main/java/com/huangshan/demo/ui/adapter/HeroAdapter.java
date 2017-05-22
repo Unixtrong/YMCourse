@@ -38,7 +38,7 @@ public class HeroAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return position;
+        return mData.get(position).getDbId();
     }
 
     @Override
