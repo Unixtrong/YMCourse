@@ -106,12 +106,15 @@
         <service
             android:name=".service.L36MusicService"
             android:enabled="true"
-            android:exported="true">
-        </service>
+            android:exported="true"/>
 
         <activity android:name=".exercise.ExcDaoActivity">
         </activity>
         <activity android:name=".ui.L37And39DaoActivity">
+        </activity>
+        <activity android:name=".exercise.ExcToolbarActivity">
+        </activity>
+        <activity android:name=".ui.L40ToolbarActivity">
         </activity>
     </application>
 

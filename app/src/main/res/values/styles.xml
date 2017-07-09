@@ -13,4 +13,8 @@
         <item name="android:textColor">#FFF</item>
         <item name="android:textSize">30sp</item>
     </style>
+
+    <style name="MyToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="actionMenuTextColor">#FFFFFF</item>
+    </style>
 </resources>

@@ -9,6 +9,7 @@ import android.widget.ListView
 import com.huangshan.demo.R
 import com.huangshan.demo.exercise.ExcDaoActivity
 import com.huangshan.demo.exercise.ExcJson
+import com.huangshan.demo.exercise.ExcToolbarActivity
 import com.huangshan.demo.sample.BillActivity
 import com.huangshan.demo.ui.*
 
@@ -31,6 +32,8 @@ class HomeActivity : AppCompatActivity() {
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
+                L40ToolbarActivity::class.java,
+                ExcToolbarActivity::class.java,
                 L37And39DaoActivity::class.java,
                 ExcDaoActivity::class.java,
                 L36MusicActivity::class.java,
