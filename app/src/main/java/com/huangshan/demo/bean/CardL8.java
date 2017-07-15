@@ -16,9 +16,9 @@ public class CardL8 {
     }
 
     public void testForL33B() {
-        System.out.println("testB, name: " + name);
         CardL8 card = new CardL8();
         card.setName("Along");
+        System.out.println("testB, name: " + name);
         card.testForL33A();
     }
 

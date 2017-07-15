@@ -6,7 +6,6 @@ import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
 import com.huangshan.demo.R
-import com.huangshan.demo.utils.Tools
 
 class ExcToolbarActivity : AppCompatActivity() {
 
@@ -16,8 +15,9 @@ class ExcToolbarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exc_toolbar)
         setSupportActionBar(mToolbar)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-        mToolbar.setNavigationIcon(R.mipmap.ic_arrow_back_white)
+//        mToolbar.setNavigationIcon(R.mipmap.ic_arrow_back_white)
         mToolbar.setLogo(R.mipmap.ic_hearthstone_logo2)
         mToolbar.title = "Tony Stark"
         mToolbar.subtitle = "Icon Man"
@@ -37,5 +37,12 @@ class ExcToolbarActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.l40_menu, menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            android.R.id.home -> finish()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

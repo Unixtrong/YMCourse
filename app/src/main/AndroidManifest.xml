@@ -116,6 +116,10 @@
         </activity>
         <activity android:name=".ui.L40ToolbarActivity">
         </activity>
+        <activity android:name=".exercise.ExcFragmentActivity">
+        </activity>
+        <activity android:name=".ui.L41FragmentActivity">
+        </activity>
     </application>
 
 </manifest>

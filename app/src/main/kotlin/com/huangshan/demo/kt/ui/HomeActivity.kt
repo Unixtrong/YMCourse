@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import com.huangshan.demo.R
 import com.huangshan.demo.exercise.ExcDaoActivity
+import com.huangshan.demo.exercise.ExcFragmentActivity
 import com.huangshan.demo.exercise.ExcJson
 import com.huangshan.demo.exercise.ExcToolbarActivity
 import com.huangshan.demo.sample.BillActivity
@@ -32,6 +33,8 @@ class HomeActivity : AppCompatActivity() {
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
+                L41FragmentActivity::class.java,
+                ExcFragmentActivity::class.java,
                 L40ToolbarActivity::class.java,
                 ExcToolbarActivity::class.java,
                 L37And39DaoActivity::class.java,
