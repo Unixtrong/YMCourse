@@ -120,6 +120,8 @@
         </activity>
         <activity android:name=".ui.L41FragmentActivity">
         </activity>
+        <activity android:name=".ui.L42RecyclerActivity">
+        </activity>
     </application>
 
 </manifest>
