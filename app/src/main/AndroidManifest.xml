@@ -120,6 +120,11 @@
         </activity>
         <activity android:name=".ui.L41FragmentActivity">
         </activity>
+        <activity
+            android:name=".ui.L43RegexActivity"
+            android:label="@string/title_activity_l42_regex"
+            android:theme="@style/AppTheme">
+        </activity>
         <activity android:name=".ui.L42RecyclerActivity">
         </activity>
     </application>
