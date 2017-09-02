@@ -4,13 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.huangshan.demo.ui.L43RegexActivity">
 
     <TextView
-        android:id="@+id/l42_tv_regex"
+        android:id="@+id/l43_tv_regex"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:id="@+id/l43_et_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:textColor="#000000"/>
 
 </LinearLayout>

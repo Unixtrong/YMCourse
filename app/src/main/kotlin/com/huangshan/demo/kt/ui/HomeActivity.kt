@@ -33,8 +33,9 @@ class HomeActivity : AppCompatActivity() {
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
-                L42RecyclerActivity::class.java,
                 L43RegexActivity::class.java,
+                L44SpanActivity::class.java,
+                L42RecyclerActivity::class.java,
                 L41FragmentActivity::class.java,
                 ExcFragmentActivity::class.java,
                 L40ToolbarActivity::class.java,
