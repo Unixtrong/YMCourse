@@ -127,6 +127,13 @@
         </activity>
         <activity android:name=".ui.L42RecyclerActivity"/>
         <activity android:name=".ui.L44SpanActivity"/>
+        <activity android:name=".exercise.ExcAnimActivity">
+        </activity>
+        <activity
+            android:name=".ui.L45AnimActivity"
+            android:label="@string/title_activity_l45_anim"
+            android:theme="@style/AppTheme">
+        </activity>
     </application>
 
 </manifest>

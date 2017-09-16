@@ -6,11 +6,9 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.TextView
 import com.huangshan.demo.R
-import com.huangshan.demo.exercise.ExcDaoActivity
-import com.huangshan.demo.exercise.ExcFragmentActivity
-import com.huangshan.demo.exercise.ExcJson
-import com.huangshan.demo.exercise.ExcToolbarActivity
+import com.huangshan.demo.exercise.*
 import com.huangshan.demo.sample.BillActivity
 import com.huangshan.demo.ui.*
 
@@ -29,10 +27,14 @@ class HomeActivity : AppCompatActivity() {
             val activityInfo = adapterView.getItemAtPosition(position) as ActivityInfo
             startActivity(Intent(this, activityInfo.clazz))
         }
+
+        TextView(this).setOnClickListener {  }
     }
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
+                L45AnimActivity::class.java,
+                ExcAnimActivity::class.java,
                 L43RegexActivity::class.java,
                 L44SpanActivity::class.java,
                 L42RecyclerActivity::class.java,

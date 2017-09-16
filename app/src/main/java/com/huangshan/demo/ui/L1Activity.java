@@ -2,6 +2,7 @@ package com.huangshan.demo.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,10 @@ public class L1Activity extends AppCompatActivity {
             Toast.makeText(this, "you click a button 222222.", Toast.LENGTH_SHORT).show();
         }
 
+        new Handler();
+
+        
+
         LinearLayout root = (LinearLayout) findViewById(R.id.activity_home);
         List<Class<? extends Activity>> classes = new ArrayList<>();
         classes.add(Kt1ButtonActivity.class);
@@ -41,5 +46,29 @@ public class L1Activity extends AppCompatActivity {
             button.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             root.addView(button);
         }
+    }
+
+    final String[] textArray = new String[]{"！", "好", "法", "大", "Kotlin"};
+    int[] indexArray = new int[]{7, 6, 5, 4, 3, 2, 1, 0};
+
+    private void foo() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String buffer = "";
+                for (int index : indexArray) {
+                    if (index < textArray.length) {
+                        buffer += textArray[index];
+                    }
+                }
+                final String result = buffer;
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        System.out.println(result);
+                    }
+                });
+            }
+        }).start();
     }
 }

@@ -1,6 +1,8 @@
 package com.huangshan.demo.utils;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -41,5 +43,10 @@ public class Tools {
 
     public static void toast(Context context, String msg) {
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    public static float dipToPixel(float dip) {
+        DisplayMetrics metrics = Resources.getSystem().getDisplayMetrics();
+        return dip * metrics.density;
     }
 }
