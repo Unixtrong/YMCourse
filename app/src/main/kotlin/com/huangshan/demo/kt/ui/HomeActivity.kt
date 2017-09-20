@@ -28,7 +28,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, activityInfo.clazz))
         }
 
-        TextView(this).setOnClickListener {  }
+        TextView(this).setOnClickListener { }
     }
 
     private fun getCourseActivities(): List<ActivityInfo> {
@@ -37,6 +37,7 @@ class HomeActivity : AppCompatActivity() {
                 ExcAnimActivity::class.java,
                 L43RegexActivity::class.java,
                 L44SpanActivity::class.java,
+                L43ListenerActivity::class.java,
                 L42RecyclerActivity::class.java,
                 L41FragmentActivity::class.java,
                 ExcFragmentActivity::class.java,

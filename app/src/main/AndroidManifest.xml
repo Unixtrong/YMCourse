@@ -134,6 +134,10 @@
             android:label="@string/title_activity_l45_anim"
             android:theme="@style/AppTheme">
         </activity>
+        <activity android:name=".ui.L43ListenerActivity">
+        </activity>
+        <activity android:name=".exercise.ExcPaintActivity">
+        </activity>
     </application>
 
 </manifest>
