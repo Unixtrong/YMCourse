@@ -138,6 +138,8 @@
         </activity>
         <activity android:name=".exercise.ExcPaintActivity">
         </activity>
+        <activity android:name=".exercise.ExcCoordinatorActivity">
+        </activity>
     </application>
 
 </manifest>

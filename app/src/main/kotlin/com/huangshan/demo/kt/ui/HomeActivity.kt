@@ -33,6 +33,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun getCourseActivities(): List<ActivityInfo> {
         return arrayOf(
+                ExcCoordinatorActivity::class.java,
                 L45AnimActivity::class.java,
                 ExcAnimActivity::class.java,
                 L43RegexActivity::class.java,
